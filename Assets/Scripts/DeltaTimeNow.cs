@@ -13,14 +13,7 @@ public class DeltaTimeNow : MonoBehaviour
 
     private void Update()
     {
-        if (timeText != null)
-        {
-            timeText.text = GetCurrentDate();
-        }
-        else
-        {
-            Debug.LogError("timeText가 null입니다. Text 컴포넌트가 제대로 연결되었는지 확인하세요.");
-        }
+        timeText.text = GetCurrentDate();
     }
 
     public static string GetCurrentDate()

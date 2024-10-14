@@ -10,23 +10,21 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Initialize();
-    }
-
-    private void Initialize()
-    {
+        characteridx = PlayerPrefs.GetInt("SelectedCharacter", 0);
         ActivateCharacter();
     }
 
     public void PenguinSelect()
     {
         characteridx = 0;
+        PlayerPrefs.SetInt("SelectedCharacter", characteridx); 
         SceneManager.LoadScene("StartScene");
     }
 
     public void WizzardSelect()
     {
         characteridx = 1;
+        PlayerPrefs.SetInt("SelectedCharacter", characteridx); 
         SceneManager.LoadScene("StartScene");
     }
 
